@@ -9,22 +9,17 @@ import { Calendar } from "@/components/ui/calendar"
 
 export default function IndexPage() {
   return (
-    <section className="container grid items-center gap-6 pb-8 pt-6 md:py-10">
-      <div className="flex max-w-[980px] flex-col items-start gap-2">
-        <h1 className="text-3xl font-extrabold leading-tight tracking-tighter sm:text-3xl md:text-5xl lg:text-6xl">
-          Beautifully designed components <br className="hidden sm:inline" />
-          built with Radix UI and Tailwind CSS.
+    <section className="container flex flex-col items-center gap-6 pb-8 pt-6 md:py-10">
+      <div className="flex max-w-[980px] flex-col items-center text-center gap-8 py-32">
+        <h1 className="font-bold text-4xl leading-tight tracking-tighter sm:text-5xl md:text-5xl lg:text-6xl">
+          Matteo Schiavon Lopez <br/>
+          <em className="font-medium text-3xl sm:text-4xl md:text-4xl lg:text-5xl">UI/UX Designer & Frontend Dev</em>
         </h1>
-        <p className="max-w-[700px] text-lg text-muted-foreground sm:text-xl">
+        <p className="max-w-[600px] text-lg text-center	text-muted-foreground align-center sm:text-xl">
           Accessible and customizable components that you can copy and paste
           into your apps. Free. Open Source. And Next.js 13 Ready.
         </p>
-      </div>
-      
-      <CardDemo defaultChecked></CardDemo>
-      <Calendar></Calendar>
-
-      <div className="flex gap-4">
+        <div className="flex gap-4">
         <Link
           href={siteConfig.links.docs}
           target="_blank"
@@ -42,6 +37,13 @@ export default function IndexPage() {
           GitHub
         </Link>
       </div>
+      </div>
+      <div className="max-w-[980px] flex w-full items-center flex-col md:flex-row md:justify-center md:items-start py-32 gap-8 ">
+      <CardDemo defaultChecked className="w-full min-w-[340px]"></CardDemo>
+      <Calendar className="w-fit"></Calendar>
+      </div>
+
+      
     </section>
   )
 }
